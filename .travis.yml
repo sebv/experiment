@@ -3,6 +3,9 @@ node_js:
 - '0.10'
 notifications:
   email: false
+branches:
+  only:
+    - master
 env:
   global:
     secure: e9OnEboDTlpKgJYA9uDZL2Hp8Rt2z+wED1cfQe2LKZg6BteOkOBTfsy4cYfhfTJJKBZLw/GTbi5HnmUAJGWYTlAVUg23e/kamlU+ACl0GfKx5Ue+Tj2CMgbweoTvrpZRBrfYwKSZfH0Cc81bp4D+QPdlO9xMl5Agu5Sv8WI3U4g=
