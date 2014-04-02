@@ -7,11 +7,12 @@ before_script:
 - pwd
 - mkdir -p ~/.git
 - git config credential.helper "store --file=~/.git/credentials"
+- git remote add pusher https://github.com/sebv/experiment.git
 - echo "https://${GH_TOKEN}:@github.com" > ~/.git/credentials
 script:
 - git remote -v
 - git tag ci-$TRAVIS_BUILD_NUMBER
-- git push --tags
+- git push pusher --tags
 env:
   global:
     secure: e9OnEboDTlpKgJYA9uDZL2Hp8Rt2z+wED1cfQe2LKZg6BteOkOBTfsy4cYfhfTJJKBZLw/GTbi5HnmUAJGWYTlAVUg23e/kamlU+ACl0GfKx5Ue+Tj2CMgbweoTvrpZRBrfYwKSZfH0Cc81bp4D+QPdlO9xMl5Agu5Sv8WI3U4g=
