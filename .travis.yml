@@ -5,9 +5,8 @@ notifications:
   email: false
 before_script:
 - pwd
-- ls -l /home/travis
-- ls -l /home/travis/.git/ 
-- git config --global credential.helper "store --file=~/.git/credentials"
+- mkdir -p ~/.git
+- git config credential.helper "store --file=~/.git/credentials"
 - echo "https://${GH_TOKEN}:@github.com" > ~/.git/credentials
 script:
 - git remote -v
