@@ -10,7 +10,7 @@ env:
   global:
     secure: e9OnEboDTlpKgJYA9uDZL2Hp8Rt2z+wED1cfQe2LKZg6BteOkOBTfsy4cYfhfTJJKBZLw/GTbi5HnmUAJGWYTlAVUg23e/kamlU+ACl0GfKx5Ue+Tj2CMgbweoTvrpZRBrfYwKSZfH0Cc81bp4D+QPdlO9xMl5Agu5Sv8WI3U4g=
 before_script:
-- git config --global user.email "appium-ci@appium.com"
+# - git config --global user.email "appium-ci@appium.com"
 - git config --global user.name "appium-ci"
 - echo "https://${GH_TOKEN}:@github.com" > ${HOME}/.git-credentials
 - git config credential.helper "store --file=${HOME}/.git-credentials"
