@@ -15,6 +15,10 @@ before_script:
 - git remote set-url --push origin https://github.com/sebv/experiment.git 
 
 script:
-- git remote -v
-- git tag ci-$TRAVIS_BUILD_NUMBER
-- git push --tags
+- git branch -f ci
+- git checkout ci
+- date > current.txt
+- git add current.txt
+- git commit -a -m "changing current time"
+- git push -f origin ci:ci
+
