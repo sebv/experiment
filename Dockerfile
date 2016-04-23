@@ -2,6 +2,6 @@ from busybox
 
 COPY boot /boot
 
-COPY data
+COPY data /data
 
 CMD /boot
